@@ -1,0 +1,50 @@
+# Add Sanity
+
+This recipe helps you add an empty Sanity instance to your site. When finished,
+see other cards for adding Sanity-instances already setup for blogs, portfolio
+sites, etc.
+
+<Config
+  name="sanity/setup-sanity"
+/>
+
+---
+
+Installing necessary packages
+
+
+<InstallPackages
+  name={["gatsby-source-sanity", "@sanity/base", "many more"]}
+/>
+
+---
+
+Create a dataset on Sanity. A dataset is where all you store all your content,
+kind of like a database. You can have more than one dataset. Just re-run this
+card to add more datasets!
+
+import CreateDataset from "gatsby-source-sanity/create-dataset"
+
+// Connects you to Sanity, setups dataset, gets tokens & dataset name and
+// saves them as env variables and in a local config store Gatsby can access.
+<CreateDataset />
+
+---
+
+
+Adding gatsby-source-sanity to your gatsby-config.js.
+
+
+<InstallGatsbyPlugin
+  name="gatsby-source-sanity"
+/>
+
+---
+
+Do something to setup their studio. Probably put it in a subfolder or something.
+
+---
+
+Sanity is ready to go!
+
+Start both the Gatsby develop server and Sanity Studio by running `npm run start`
