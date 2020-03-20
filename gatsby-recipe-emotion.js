@@ -34,7 +34,7 @@ You can now use Emotion in your site!
 
 Check out the example Emotion page to start playing with it!
 
-<WriteExampleFile path="src/pages/emotion-sample.js">
+<WriteFile example={true} path="src/pages/emotion-sample.js">
 import React from "react"
 import { css } from "@emotion/core"
 
