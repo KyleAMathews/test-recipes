@@ -18,7 +18,7 @@
 
 ### `<SetNPMScript>`
 
-```
+```jsx
 <SetNpmScript
   name="test"
   command="jest"
