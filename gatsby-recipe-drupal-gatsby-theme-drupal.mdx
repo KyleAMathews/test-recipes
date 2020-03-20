@@ -1,0 +1,45 @@
+# Build a blog with gatsby-theme-blog & Drupal
+
+This recipe helps you setup Drupal to work with gatsby-theme-blog.
+
+<Config
+  name="gatsbys/setup-drupal-gatsby-theme-blog"
+  requires="gatsbyjs/setup-drupal"
+/>
+
+---
+
+First create the content type in Drupal.
+
+import schema from "gatsby-theme-blog/schema"
+import { ServerLink, SetupSchemaMapping } from "gatsby-source-drupal"
+
+<ServerLink to="/admin/content-types">Drupal Content Types Admin Page</ServerLink>
+
+The content type needs to look like the following.
+
+<RenderSchema schema={schema} />
+<SetupSchemaMapping schema={schema} />
+
+---
+
+For Gatsby to see the new content type, we'll need to restart the local
+development process. When it restarts, this recipe will automatically come back
+to this point.
+
+<RestartGatsbyDev />
+
+---
+
+import schema from "gatsby-theme-blog/schema"
+
+// Prints error if there's a problem and asks the person to go back a step.
+<VerifySchema
+  schema={schema}
+/>
+
+---
+
+Happy blogging!
+
+<LocalDevLink to="/blog">Visit your new blog</LocalDevLink>

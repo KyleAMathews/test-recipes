@@ -3,6 +3,7 @@
 This recipe helps you start developing with the Emotion CSS in JS library
 
 <Config
+  name="gatsbyjs/add-emotion"
   conflictsWith="gatsby-recipe-styled-components"
 />
 

@@ -1,0 +1,46 @@
+# Build a blog with gatsby-theme-blog & Contentful
+
+This recipe helps you setup Contentful to work with gatsby-theme-blog. Don't worry!
+Thanks to Contentful's APIs, it's mostly automatic!
+
+<Config
+  name="contentful/setup-gatsby-theme-blog"
+  requires="contentful/setup-contentful"
+/>
+
+---
+
+Installing the `gatsby-theme-blog` package and creating the "Blog"
+content type on Contentful.
+
+import { ProvisionType } from "gatsby-source-contentful"
+import schema from "gatsby-theme-blog/schema"
+
+// This sets up the content type w/ some example data
+// + creates the schema mapping locally to map back to the generic type.
+<ProvisionType
+  schema={schema}
+/>
+
+---
+
+Adding gatsby-theme-blog to your gatsby-config.js
+
+
+<InstallGatsbyPlugin
+  name="gatsby-theme-blog"
+/>
+
+---
+
+For Gatsby to see the new content type and use the theme, we'll need to restart
+the local development process. When it restarts, this recipe will automatically
+come back to this point.
+
+<RestartGatsbyDev />
+
+---
+
+Happy blogging!
+
+<LocalDevLink to="/blog">Visit your new blog</LocalDevLink>
