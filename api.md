@@ -100,3 +100,18 @@ and asks the user to provide the options.
 #### props
 * **name** name of hte plugin
 * **options** provide defaults for options. The user will be asked for other options (and can still override defaults if desired).
+
+### `ShadowFile`
+
+Shadows a file from a theme into the user's source tree.
+
+```jsx
+<ShadowFile
+  theme="gatsby-plugin-theme-ui"
+  path="src/gatsby-plugin-theme-ui/index.js"
+/>
+```
+
+#### props
+* **theme** name of the theme
+* **path** path to the file to shadow.

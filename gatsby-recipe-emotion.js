@@ -1,4 +1,4 @@
-# Emotion
+# Add Emotion
 
 This recipe helps you start developing with the Emotion CSS in JS library
 
@@ -8,7 +8,7 @@ This recipe helps you start developing with the Emotion CSS in JS library
 
 ---
 
-Install necessary packages
+Installing necessary packages
 
 <InstallPackages
   name={["gatsby-plugin-emotion", "@emotion/core", "@emotion/styled"]}
