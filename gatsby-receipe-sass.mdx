@@ -1,0 +1,62 @@
+# Add Sass/SCSS
+
+Sass is an extension of CSS that gives you more advanced features like nested
+rules, variables, mixins, and more.
+
+Sass has 2 syntaxes. The most commonly used syntax is “SCSS”, and is a superset
+of CSS. That means all valid CSS syntax, is valid SCSS syntax. SCSS files use
+the extension .scss
+
+Sass will compile .scss and .sass files to .css files for you, so you can write
+your stylesheets with more advanced features.
+
+<Config
+  name="gatsbyjs/sass"
+/>
+
+---
+
+Installing packages
+
+<InstallPackages names={["node-sass", "gatsby-plugin-sass"]} />
+
+---
+
+Adding gatsby-plugin-sass to your gatsby-config.js
+
+<InstallGatsbyPlugin name="gatsby-plugin-sass" />
+
+---
+
+<Meta stepType="example" />
+
+<LocalDevLink to="/scss-sample/">Check out the example SCSS page</LocalDevLink>
+to start playing with it!
+
+<WriteFile example={true} path="src/pages/scss-sample.scss">
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+</WriteFile>
+
+<WriteFile example={true} path="src/pages/scss-sample.js">
+import React from "react"
+import "./scss-sample.scss"
+
+export default () => (
+  <div>
+    <p
+      css={{
+        background: "pink",
+        color: "blue",
+      }}
+    >
+      This page is using Emotion.
+    </p>
+  </div>
+)
+</WriteExampleFile>

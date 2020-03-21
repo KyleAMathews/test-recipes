@@ -73,7 +73,7 @@ Config for the entire recipe card. By convention is in the inital step.
 * **packageName** name of the package
 * **conflictsWith** List NPM packages that this recipe would conflict with. Users will be warned when running a recipe
 if they've already got this package installed or if another recipe in their stack will install it.
-* **requires** designates a card which must be run before this one on this site e.g. you have to
+* **dependencies** designates a card which must be run before this one on this site e.g. you have to
   setup an integration with Contentful before you can add content types.
 
 ### `<Meta>`
@@ -119,7 +119,7 @@ Shadows a file from a theme into the user's source tree.
 * **theme** name of the theme
 * **path** path to the file to shadow.
 
-### `<OpenLocalDevLink>`
+### `<LocalDevLink>`
 
 Renders a link to the specified path on the local dev instance.
 
@@ -129,3 +129,23 @@ Renders a link to the specified path on the local dev instance.
 
 #### props
 * **to** path on the site. The interpreter will automatically add the localhost & port to the path.
+
+### `<GeneratePage>`
+
+Helps someone interactively generate a page. You can set options & suggestions.
+
+```jsx
+<GeneratePage
+  options={{
+    clientSide: true
+  }}
+  suggestedOptions={{
+    path="app/*"
+  }}
+/>
+```
+
+#### props
+* **options** preset required page options
+* **suggestedOptions** suggest typical responses to options
+* **onSubmit** respond when the user has submitted their answers

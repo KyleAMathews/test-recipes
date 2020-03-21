@@ -1,0 +1,41 @@
+# Add Auth0 to authenticate a route
+
+Auth0 makes it easy to build apps with Gatsby! This recipe
+will create an authenticated section of your site that's authenticated
+with Gatsby.
+
+<Config
+  name="auth0/add-auth0-to-route"
+  dependencies="auth0/add-auth0"
+/>
+
+---
+
+First pick the root path for your app.
+
+<GeneratePage
+  options={{
+    clientSide: true
+  }}
+  suggestedOptions={{
+    path="app/*"
+  }}
+  onSubmit={(pageConfig) => {
+    pageConfig.createImport('import ProtectedRoute from "gatsby-theme-auth0"')
+    pageConfig.insertComponent(<ProtectedRoute>You can't see me until you login</ProtectedRoute>)
+    return (
+      <div>
+      <Text>Creating the page</Text>
+      <WriteFile path={pageConfig.filePath}>
+        {pageConfig.component}
+      </WriteFile>
+      </div>
+    )
+  }}
+/>
+
+---
+
+Happy development!
+
+<LocalDevLink to={pageConfig.rootPath}>Try logging in to your new app.</LocalDevLink>
