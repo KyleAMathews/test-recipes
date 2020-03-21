@@ -1,0 +1,30 @@
+# Publish a new version of a package
+
+This recipe helps you publish a new version of an NPM package.
+
+<Config
+  name="npmjs/publish-new-version"
+/>
+
+---
+
+// Check if the environment is ready to go e.g. no uncommited changes
+// Get the packaage name off of `stack.package.name`
+// Ask them if they want to do a patch/minor/major release.
+
+---
+
+Creating new version
+
+// This streams logs to screen.
+<RunShellScript command={`npm version ${stat.npmPublishPackage.newVersion}`} />
+
+---
+
+Publishing new version to NPM
+
+<RunShellScript command={`npm version ${stat.npmPublishPackage.newVersion}`} />
+
+---
+
+<Link to={stat.npmPublishPackage.newVersionUrl}>See your new published version</Link>
