@@ -20,22 +20,25 @@ First pick the root path for your app.
   suggestedOptions={{
     path="app/*"
   }}
-  onSubmit={(pageConfig) => {
-    pageConfig.createImport('import ProtectedRoute from "gatsby-theme-auth0"')
-    pageConfig.insertComponent(<ProtectedRoute>You can't see me until you login</ProtectedRoute>)
-    return (
-      <div>
-      <Text>Creating the page</Text>
-      <WriteFile path={pageConfig.filePath}>
-        {pageConfig.component}
-      </WriteFile>
-      </div>
-    )
-  }}
 />
+
+---
+
+Creating the login page & app
+
+{
+  // Add the auth0 theme import & add it to the body
+  pageContext.createImport('import ProtectedRoute from "gatsby-theme-auth0"')
+  pageContext.setComponent(<ProtectedRoute>You can't see me until you login</ProtectedRoute>)
+}
+
+import LoginPage from "gatsby-theme-auth0"
+
+<WritePage page={pageContext} />
+<WritePage page={{path: `/login/`, component: LoginPage />
 
 ---
 
 Happy development!
 
-<LocalDevLink to={pageConfig.rootPath}>Try logging in to your new app.</LocalDevLink>
+<LocalDevLink to={pageContext.rootPath}>Try logging in to your new app.</LocalDevLink>

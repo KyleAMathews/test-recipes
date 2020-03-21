@@ -149,3 +149,14 @@ Helps someone interactively generate a page. You can set options & suggestions.
 * **options** preset required page options
 * **suggestedOptions** suggest typical responses to options
 * **onSubmit** respond when the user has submitted their answers
+
+### `<WritePage>`
+
+Write out page(s) based on provided context.
+
+```jsx
+<WritePage page={{path: `/login/`, component: LoginPage />
+```
+
+#### props
+* **page** object with `path`, `component`, `clientSide`, etc. keys
