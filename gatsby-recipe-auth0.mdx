@@ -14,6 +14,7 @@ with Auth0.
 First pick the root path for your app.
 
 <GeneratePage
+  name="auth0AppPage"
   options={{
     clientSide: true
   }}
@@ -28,13 +29,13 @@ Creating the login page & app
 
 {
   // Add the auth0 theme import & add it to the body
-  pageContext.createImport('import ProtectedRoute from "gatsby-theme-auth0"')
-  pageContext.setComponent(<ProtectedRoute>You can't see me until you login</ProtectedRoute>)
+  auth0AppPage.pageContext.createImport('import ProtectedRoute from "gatsby-theme-auth0"')
+  auth0AppPage.pageContext.setComponent(<ProtectedRoute>You can't see me until you login</ProtectedRoute>)
 }
 
 import LoginPage from "gatsby-theme-auth0"
 
-<WritePage page={pageContext} />
+<WritePage page={auth0AppPage.pageContext} />
 <WritePage page={{path: `/login/`, component: LoginPage />
 
 ---
