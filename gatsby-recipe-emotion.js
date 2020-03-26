@@ -51,4 +51,4 @@ export default () => (
     </p>
   </div>
 )
-</WriteExampleFile>
+</WriteFile>
