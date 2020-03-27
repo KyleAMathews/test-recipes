@@ -1,8 +1,9 @@
 # API ideas
 
-* Favor declarative verbs
+* Components are declaative
 * Idempotent all the things
 * Dry-run support
+* Anything marked as example should ask the user first if they want to do it & never overwrite any existing data.
 * Use API names of underlying systems e.g. `fs` package from Node.js
 
 ## NPM Packages
