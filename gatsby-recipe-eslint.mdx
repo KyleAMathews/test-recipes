@@ -25,18 +25,18 @@ add additional presets, plugins, and rules.
 
 Installing necessary packages
 
-<InstallPackages names="eslint-config-react-app" dev={true} />
+<NPMPackage name="eslint-config-react-app" dev={true} />
 
 ---
 
-<WriteFile path=".eslintrc.js">
+<File path=".eslintrc.js">
 module.exports = {
   globals: {
     __PATH_PREFIX__: true,
   },
   extends: `react-app`,
 }
-</WriteFile>
+</File>
 
 ---
 

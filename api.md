@@ -7,9 +7,9 @@
 
 ## NPM Packages
 
-### `<InstallPackages`
+### `<NPMPackage`
 
-`<InstallPackage name="lodash" version="latest"  />`
+`<NPMPackage name="lodash" version="latest"  />`
 
 ### props
 * **name**: name of the package(s) to install. Takes a string or an array of strings.
@@ -19,12 +19,12 @@
 ### `<SetNPMScript>`
 
 ```jsx
-<SetNpmScript
+<NpmScript
   name="test"
   command="jest"
 />
 
-<SetNpmScript
+<NpmScript
   name="test:watch"
   command="jest --watch"
 />
@@ -36,17 +36,17 @@
 
 ## FileSystem
 
-### `<WriteFile>`
+### `<File>`
 
 ```jsx
-<WriteFile path="src/pages/i-dunno.js">
+<File path="src/pages/i-dunno.js">
 Import React from "react"
 export default () => <div>Yeah... I dunno</div>
-</WriteFile>
+</File>
 ```
 
 ```jsx
-<WriteFile path="src/utils/something.js" src="./something.js" />
+<File path="src/utils/something.js" src="./something.js" />
 ```
 
 #### props
@@ -90,13 +90,14 @@ Tell the recipe interpreter stuff
 
 ## Gatsby-specific
 
-### `<InstallGatsbyPlugin>`
+### `<GatsbyPlugin>`
 
-Installs a Gatsby Plugin. Reads the plugin's options definition (if one is provided)
-and asks the user to provide the options.
+Installs a Gatsby Plugin in the site's `gatsby-config.js`. Reads the plugin's
+options definition (if one is provided) and asks the user to provide the
+options.
 
 ```jsx
-<InstallGatsbyPlugin
+<GatsbyPlugin
   name="gatsby-plugin-emotion"
 />
 ```
@@ -130,12 +131,12 @@ Renders a link to the specified path on the local dev instance.
 #### props
 * **to** path on the site. The interpreter will automatically add the localhost & port to the path.
 
-### `<GeneratePage>`
+### `<Page>`
 
 Helps someone interactively generate a page. You can set options & suggestions.
 
 ```jsx
-<GeneratePage
+<Page
   options={{
     clientSide: true
   }}

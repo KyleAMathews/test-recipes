@@ -18,13 +18,14 @@ your stylesheets with more advanced features.
 
 Installing packages
 
-<InstallPackages names={["node-sass", "gatsby-plugin-sass"]} />
+<NPMPackage name={"node-sass"} />
+<NPMPackage name={"gatsby-plugin-sass"} />
 
 ---
 
 Adding gatsby-plugin-sass to your gatsby-config.js
 
-<InstallGatsbyPlugin name="gatsby-plugin-sass" />
+<GatsbyPlugin name="gatsby-plugin-sass" />
 
 ---
 
@@ -33,7 +34,7 @@ Adding gatsby-plugin-sass to your gatsby-config.js
 <LocalDevLink to="/scss-sample/">Check out the example SCSS page</LocalDevLink>
 to start playing with it!
 
-<WriteFile example={true} path="src/pages/scss-sample.scss">
+<File example={true} path="src/pages/scss-sample.scss">
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 
@@ -41,9 +42,9 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
 }
-</WriteFile>
+</File>
 
-<WriteFile example={true} path="src/pages/scss-sample.js">
+<File example={true} path="src/pages/scss-sample.js">
 import React from "react"
 import "./scss-sample.scss"
 
@@ -59,4 +60,4 @@ export default () => (
     </p>
   </div>
 )
-</WriteFile>
+</File>

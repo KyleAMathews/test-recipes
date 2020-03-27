@@ -10,7 +10,7 @@ This recipe helps you setup Jest in your Gatsby site to test components and util
 
 Installing the `jest` package
 
-<InstallPackages name="jest" dev={true} />
+<NPMPackage name="jest" dev={true} />
 
 ---
 
@@ -18,20 +18,20 @@ Installing the `jest` package
 
 Adding some jest test files for you to play with
 
-<WriteFile path="src/jest-example/sum.js">
+<File path="src/jest-example/sum.js">
 function sum(a, b) {
   return a + b;
 }
 module.exports = sum;
-</WriteFile>
+</File>
 
-<WriteFile path="src/jest-example/sum.test.js">
+<File path="src/jest-example/sum.test.js">
 const sum = require('./sum');
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
 });
-</WriteFile>
+</File>
 
 ---
 

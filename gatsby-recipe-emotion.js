@@ -11,8 +11,14 @@ This recipe helps you start developing with the Emotion CSS in JS library
 
 Installing necessary packages
 
-<InstallPackages
-  name={["gatsby-plugin-emotion", "@emotion/core", "@emotion/styled"]}
+<NPMPackage
+  name={"gatsby-plugin-emotion"}
+/>
+<NPMPackage
+  name={"@emotion/core"}
+/>
+<NPMPackage
+  name={"@emotion/styled"}
 />
 
 ---
@@ -20,7 +26,7 @@ Installing necessary packages
 Adding `gatsby-plugin-emotion` to your `gatsby-config.js`. It provides support
 for Emotion during Gatsby's server side rendering.
 
-<InstallGatsbyPlugin
+<GatsbyPlugin
   name="gatsby-plugin-emotion"
 />
 
@@ -35,7 +41,7 @@ You can now use Emotion in your site!
 
 Check out the example Emotion page to start playing with it!
 
-<WriteFile example={true} path="src/pages/emotion-sample.js">
+<File example={true} path="src/pages/emotion-sample.js">
 import React from "react"
 import { css } from "@emotion/core"
 
@@ -51,4 +57,4 @@ export default () => (
     </p>
   </div>
 )
-</WriteFile>
+</File>

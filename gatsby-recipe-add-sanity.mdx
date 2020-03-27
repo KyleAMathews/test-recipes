@@ -13,8 +13,11 @@ sites, etc.
 Installing necessary packages
 
 
-<InstallPackages
-  name={["gatsby-source-sanity", "@sanity/base", "many more"]}
+<NPMPackage
+  name={"gatsby-source-sanity"}
+/>
+<NPMPackage
+  name={"@sanity/base"}
 />
 
 ---
@@ -35,7 +38,7 @@ import CreateDataset from "gatsby-source-sanity/create-dataset"
 Adding gatsby-source-sanity to your gatsby-config.js.
 
 
-<InstallGatsbyPlugin
+<GatsbyPlugin
   name="gatsby-source-sanity"
 />
 
