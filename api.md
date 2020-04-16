@@ -1,6 +1,6 @@
 # API ideas
 
-* Components are declaative
+* Components are declarative
 * Idempotent all the things
 * Dry-run support
 * Anything marked as example should ask the user first if they want to do it & never overwrite any existing data.
@@ -41,7 +41,7 @@
 
 ```jsx
 <File path="src/pages/i-dunno.js">
-Import React from "react"
+import React from "react"
 export default () => <div>Yeah... I dunno</div>
 </File>
 ```
